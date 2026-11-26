@@ -1,0 +1,7 @@
+# The original full-resolution photos and the image-prep script live in the
+# repo for future edits, but are not part of the public site.
+/source-media/*   /404.html   404
+/tools/*          /404.html   404
+
+# Old paths from the previous site layout.
+/Folder%20For%20Website%20Overall/*   /:splat   301

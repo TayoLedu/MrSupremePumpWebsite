@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are written in the repo, and the URL they are served
+# from on the deployed site.
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Weekly Blogs"
+    files:
+      - label: "All Blog Posts"
+        name: "posts"
+        file: "blog-data.json"
+        fields:
+          - name: "posts"
+            label: "Posts"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Cover Image", name: "image", widget: "image", required: false}
+              - {label: "Blog Text", name: "body", widget: "markdown"}
